@@ -17,9 +17,9 @@ public class BasketScreen extends AbstractScreen{
             Basket.INSTANCE.displayTicketList();
         }
         if ("2".equalsIgnoreCase(firstResponse)){
-            System.out.println("Saldo Twoich zakupów wynosi: ");
             Basket.INSTANCE.displayAmount();
         }
+        screenManager.chooseScreen(ScreenIdentity.MainScreen);
     }
 
     @Override

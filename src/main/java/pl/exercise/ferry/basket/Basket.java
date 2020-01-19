@@ -38,7 +38,7 @@ public class Basket{
     }
 
     public void displayAmount() {
-        System.out.println(Basket.INSTANCE.amount.toString());
+        System.out.println("Saldo zakupów: " + Basket.INSTANCE.amount.toString() + "zl");
     }
 
 
