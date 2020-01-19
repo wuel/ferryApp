@@ -18,8 +18,7 @@ public class PersonScreen extends AbstractScreen {
     @Override
     public void interact() {
         System.out.println("Podaj imie pasazera");
-        cleanBuffer();
-        String name = in.nextLine();
+        String name = in.next();
         System.out.println("Podaj wiek dla kogo bilet?");
         int age = in.nextInt();
         Ticket ticket = PersonScreen.getPersonTicket(age, name);

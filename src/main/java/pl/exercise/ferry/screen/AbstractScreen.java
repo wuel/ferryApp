@@ -11,11 +11,5 @@ public abstract class AbstractScreen implements Screen{
         this.screenManager = screenManager;
     }
 
-    protected void cleanBuffer() {
-        if (in.hasNext()){
-            in.next();
-        }
-    }
-
 
 }

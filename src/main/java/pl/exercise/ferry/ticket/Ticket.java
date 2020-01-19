@@ -5,4 +5,10 @@ import java.math.BigDecimal;
 public interface Ticket {
 
   BigDecimal getPrice();
+
+  public String getName();
+
+
 }
+
+

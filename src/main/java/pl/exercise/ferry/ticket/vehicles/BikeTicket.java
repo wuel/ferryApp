@@ -16,4 +16,9 @@ public class BikeTicket extends VehicleTicket {
     public BigDecimal getPrice() {
         return BigDecimal.valueOf(10);
     }
+
+    @Override
+    public String getName() {
+        return null;
+    }
 }

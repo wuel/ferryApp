@@ -20,4 +20,9 @@ public class BusTicket extends VehicleTicket {
         int length = in.nextInt();
         return BigDecimal.valueOf(5*length);
     }
+
+    @Override
+    public String getName() {
+        return null;
+    }
 }

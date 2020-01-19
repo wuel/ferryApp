@@ -15,4 +15,9 @@ public class YoungTicket extends PersonTicket {
     public BigDecimal getPrice() {
         return BigDecimal.valueOf(5);
     }
+
+    @Override
+    public String getName() {
+        return name.toString();
+    }
 }

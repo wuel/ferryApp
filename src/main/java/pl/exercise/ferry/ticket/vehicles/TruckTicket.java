@@ -19,4 +19,9 @@ public class TruckTicket extends VehicleTicket {
         int weight = in.nextInt();
         return BigDecimal.valueOf(10*weight);
     }
+
+    @Override
+    public String getName() {
+        return null;
+    }
 }
