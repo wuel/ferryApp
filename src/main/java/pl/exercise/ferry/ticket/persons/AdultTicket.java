@@ -7,8 +7,8 @@ import java.math.BigDecimal;
 
 public class AdultTicket extends PersonTicket {
 
-    public AdultTicket() {
-        super(PaxType.ADULT);
+    public AdultTicket(String name) {
+        super(PaxType.ADULT, name);
     }
 
     @Override

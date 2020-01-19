@@ -6,11 +6,12 @@ import pl.exercise.ferry.ticket.vehicles.BusTicket;
 import pl.exercise.ferry.ticket.vehicles.CarTicket;
 import pl.exercise.ferry.ticket.vehicles.TruckTicket;
 
-import java.util.Scanner;
 
-public class VehickleScreen implements Screen {
+public class VehicleScreen extends AbstractScreen{
 
-    private static Scanner in = new Scanner(System.in);
+    VehicleScreen(ScreenManager screenManager) {
+        super(screenManager);
+    }
 
     @Override
     public void interact() {
@@ -21,7 +22,7 @@ public class VehickleScreen implements Screen {
                 "3.  BUS,\n" +
                 "4.  TRUCK\n");
         int type = in.nextInt();
-        Ticket ticket = VehickleScreen.getVehicleTicket(type);
+        Ticket ticket = VehicleScreen.getVehicleTicket(type);
         System.out.println("Cena za bilet wynosi: " + ticket.getPrice().toString());
     }
 
@@ -40,6 +41,11 @@ public class VehickleScreen implements Screen {
                 break;
         }
         return null;
+    }
+
+    @Override
+    public boolean isSupportingId(ScreenIdentity screenId) {
+        return ScreenIdentity.VehicleScreen == screenId;
     }
 
 }

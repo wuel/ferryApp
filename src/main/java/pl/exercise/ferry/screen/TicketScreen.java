@@ -1,10 +1,10 @@
 package pl.exercise.ferry.screen;
 
-import java.util.Scanner;
+public class TicketScreen extends AbstractScreen {
 
-public class TicketScreen implements Screen {
-
-    private final Scanner in = new Scanner(System.in);
+    TicketScreen(ScreenManager screenManager) {
+        super(screenManager);
+    }
 
     @Override
     public void interact() {
@@ -13,16 +13,17 @@ public class TicketScreen implements Screen {
         System.out.println("2. Pojazd");
         String secondResponse = in.nextLine();
         if("1".equalsIgnoreCase(secondResponse)){
-           PersonScreen personTicket = new PersonScreen();
-           personTicket.interact();
-            System.out.println();
+           screenManager.chooseScreen(ScreenIdentity.PersonScreen);
         }
         if ("2".equalsIgnoreCase(secondResponse)) {
-            VehickleScreen ticketVehicle = new VehickleScreen();
-            ticketVehicle.interact();
-            System.out.println();
+            screenManager.chooseScreen(ScreenIdentity.VehicleScreen);
         }
-        MainScreen mainScreen = new MainScreen();
-        mainScreen.interact();
+        screenManager.chooseScreen(ScreenIdentity.MainScreen);
     }
+
+    @Override
+    public boolean isSupportingId(ScreenIdentity screenId) {
+        return ScreenIdentity.TicketScreen == screenId;
+    }
+
 }
