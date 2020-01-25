@@ -7,8 +7,8 @@ import java.math.BigDecimal;
 
 public class YoungTicket extends PersonTicket {
 
-    public YoungTicket(String name) {
-        super(PaxType.YOUNG, name);
+    public YoungTicket(String name, int age) {
+        super(PaxType.YOUNG, name, age);
     }
 
     @Override
@@ -18,6 +18,10 @@ public class YoungTicket extends PersonTicket {
 
     @Override
     public String getName() {
-        return name.toString();
+        return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 }

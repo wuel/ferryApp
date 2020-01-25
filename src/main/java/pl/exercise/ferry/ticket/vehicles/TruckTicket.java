@@ -9,19 +9,20 @@ public class TruckTicket extends VehicleTicket {
 
     private final Scanner in = new Scanner(System.in);
 
-    public TruckTicket() {
-        super(VehicleType.TRUCK, "unknown");
+    int weight;
+
+    public TruckTicket(String owner, int weight) {
+        super(VehicleType.TRUCK, owner);
+        this.weight = weight;
     }
 
     @Override
     public BigDecimal getPrice() {
-        System.out.println("Podaj wagę pojazdu w tonach!");
-        int weight = in.nextInt();
         return BigDecimal.valueOf(10*weight);
     }
 
     @Override
     public String getName() {
-        return null;
+        return "ciężarówka";
     }
 }

@@ -10,19 +10,21 @@ public class BusTicket extends VehicleTicket {
 
     private final Scanner in = new Scanner(System.in);
 
-    public BusTicket() {
-        super(VehicleType.BUS, "unknown");
+    int length;
+
+    public BusTicket(String owner, int length) {
+        super(VehicleType.BUS, owner);
+        this.length = length;
+
     }
 
     @Override
     public BigDecimal getPrice() {
-        System.out.println("Podaj długosc autobusu!");
-        int length = in.nextInt();
         return BigDecimal.valueOf(5*length);
     }
 
     @Override
     public String getName() {
-        return null;
+        return "autobus";
     }
 }

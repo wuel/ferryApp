@@ -12,7 +12,7 @@ public class BasketScreen extends AbstractScreen{
     public void interact() {
         System.out.println("1. Wyświetl zakupione bilety");
         System.out.println("2. Wyswietl saldo zakupow");
-        String firstResponse = in.nextLine();
+        String firstResponse = in.next();
         if ("1".equalsIgnoreCase(firstResponse)){
             Basket.INSTANCE.displayTicketList();
         }

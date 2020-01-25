@@ -10,8 +10,8 @@ public class TicketScreen extends AbstractScreen {
     public void interact() {
         System.out.println("WWybierz bilet który chcesz kupić");
         System.out.println("1. Osoba");
-        System.out.println("2. Pojazd");
-        String secondResponse = in.nextLine();
+        System.out.println("2. Pojazd + kierowca");
+        String secondResponse = in.next();
         if("1".equalsIgnoreCase(secondResponse)){
            screenManager.chooseScreen(ScreenIdentity.PersonScreen);
         }

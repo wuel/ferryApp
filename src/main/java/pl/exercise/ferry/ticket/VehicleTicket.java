@@ -2,6 +2,7 @@ package pl.exercise.ferry.ticket;
 
 import pl.exercise.ferry.vehicle.VehicleType;
 
+
 public abstract class VehicleTicket implements Ticket {
 
   private final VehicleType vehicleType;
@@ -12,4 +13,11 @@ public abstract class VehicleTicket implements Ticket {
     this.owner = owner;
   }
 
+    public VehicleType getVehicleType() {
+        return vehicleType;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
 }
