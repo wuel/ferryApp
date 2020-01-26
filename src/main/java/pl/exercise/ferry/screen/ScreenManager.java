@@ -1,5 +1,6 @@
 package pl.exercise.ferry.screen;
 
+import java.io.IOException;
 import java.util.Set;
 
 
@@ -13,14 +14,15 @@ public class ScreenManager {
         final VehicleScreen vehicleScreen = new VehicleScreen(this);
         final TicketScreen ticketScreen = new TicketScreen(this);
         final BasketScreen basketScreen = new BasketScreen(this);
-        this.screens = Set.of(personScreen, mainScreen, vehicleScreen, ticketScreen, basketScreen);
+        final CargoScreen cargoScreen = new CargoScreen(this);
+        this.screens = Set.of(personScreen, mainScreen, vehicleScreen, ticketScreen, basketScreen, cargoScreen);
     }
 
-    public void start() {
+    public void start() throws IOException {
         chooseScreen(ScreenIdentity.MainScreen);
     }
 
-    void chooseScreen(ScreenIdentity screenId) {
+    void chooseScreen(ScreenIdentity screenId) throws IOException {
         Screen chosenScreen = findScreen(screenId);
         chosenScreen.interact();
     }

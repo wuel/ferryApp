@@ -27,4 +27,8 @@ public class BusTicket extends VehicleTicket {
     public String getName() {
         return "autobus";
     }
+
+    public int getLength() {
+        return length;
+    }
 }

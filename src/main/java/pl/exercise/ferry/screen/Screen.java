@@ -1,8 +1,10 @@
 package pl.exercise.ferry.screen;
 
+import java.io.IOException;
+
 public interface Screen {
 
-  void interact();
+  void interact() throws IOException;
 
   boolean isSupportingId(ScreenIdentity screenId);
 }

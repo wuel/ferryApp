@@ -11,6 +11,8 @@ public class TruckTicket extends VehicleTicket {
 
     int weight;
 
+
+
     public TruckTicket(String owner, int weight) {
         super(VehicleType.TRUCK, owner);
         this.weight = weight;
@@ -25,4 +27,9 @@ public class TruckTicket extends VehicleTicket {
     public String getName() {
         return "ciężarówka";
     }
+
+    public int getWeight() {
+        return weight;
+    }
+
 }
